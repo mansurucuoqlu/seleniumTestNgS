@@ -1,0 +1,58 @@
+  web tables in HTML?
+ tr -> stands for table row std> stands for table date
+ ]
+ sth -> stands for table header. just makes things centered and bold.
+ «table>
+ «thead> str>
+ std></td> <td>c/td>
+ </tr </thead> <tbody>
+ «tr std>c/td>
+ std></td> </tr «tr> std></td> <td></td>
+ </tr
+ </tbody>
+ /table>
+How do we handle wed tables using Selenium webdriver?
+ -> He create specific path locators to locate what we want to get from the table itself.
+ How do we handle web tables?
+ By creating custom Locators to get whatever I need to get from the table.
+ -> If I need to get the whole row, I create a Locator that returns me the whole row.
+ -> If I need to get 1 single cell, I need to create a Locator that returns me 1 single cell.
+  //table[aid= ct100 MainContent _orderGrid' ]/tbody/tr
+ //table [aid='ct00 MainContent orderGrid'1//tr
+
+ ALERTS
+ There are two types of alerts.
+ 1- HTML Alerts:
+ -> How do we handle: We just locate just as another web element on the page,
+ -> Then we click.
+ 2- JavaScript Alerts:
+ HOW DO WE HANDLE ALERTS?
+ -> Using Alerts.
+ -> JS alerts are not part of the HTML structure. Therefore we need to switch the driver focus to the
+ alert itself.
+
+ 1- Create an instance of Alert, then switch to alert.
+ Alert alert = driver.switchTo).alert;
+ 2- to accept, dismiss
+
+ IFRAMES
+ -> Iframes are basically <html> inside of another <html>
+ -> Selenium can only focus one thing at a time.
+ So we need to SWITCH driver's focus to the inner frame to be able to perform any action with Selenium.
+ -> There are 3 ways to switch to frames
+ 1- Locating as WebElement then using that webElement to switch.
+ WebELement iframe = driver. findElement(LOCATOR);
+ driver.switchTo.frame (iframe);
+ 2- Switching by index. We pass the index number of the frame.
+ -> if you have more than one iframe on the page, indexes are used.
+ <iframe>
+ --> index @
+ <iframe>
+ -> index 1
+ <iframe>
+ --> index 2
+
+ driver.switchTo..frame(0);
+ 3-Switching by id or name attribute vlaue
+ driver.switchTo.frame("idValue")
+ driver.switchTo.frame(nameValue")

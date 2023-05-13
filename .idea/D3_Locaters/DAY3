@@ -1,0 +1,79 @@
+/*
+//driver.findelement(By.classname("gLyf  fsa")).sendkeys()///....
+if classname has space in it it is good idea to yuse mos of case you wikll recieve an error
+driver,findelmeent (by.classname "gLyf") .sendkeys"Apple" is works sometimes bbut its not unmieque thats why we gotta use more unique attribute
+
+//if webelement also has classname attribute but its not unique its is not good idea to use
+//if id is dynamic means when youi refresh the page and if you see id is changing that means dynameic it wont work and nuique
+
+
+6-tagName
+--iyou locate using tagbname itself
+--the usage of this one not too much
+--it is good if you want to pring same tag names
+
+
+for ex : if you wanna print all links in the page then you will use thios method
+driver.findelement(by.tagname(a))
+driver.findelement(by.tagname(div))
+
+*/*/*/*/*/*/
+utilities package i
+the reason is we usiong ustilities its makes our cod more reusable
+easy to maintance
+in the future if you wanna change something instead of going each class you will only chanmge from utilities
+
+7-css selectore
+it has own syntax
+common methods that you can use for css
+1- tagname (attribute = 'value')
+2-tagname.value>> means in css locator classname
+3-tagname#value# means id in css
+you can also go from parent to child
+div[class= 'er4g']>a
+8-xpath
+2type xpath :absulate and relative
+1-absulate xpath
+startw with
+you need to start top parent beging of html code
+it is not usefull because it take from very top from to child
+html
+ head
+ body
+      div
+      div
+                a
+     div
+      div
+     body h
+     head
+     hyml
+
+     for ex :/html/body/div/div/a
+     /html/body/div
+if you ghave sibligs yo u can use number . it will pic the siblibnbgs for you
+/html/body/div[2]
+2-relative xpath
+--Starts with //
+--double // allows you to locate your webelement from anywhere in html code
+--more usefull when we compare for absulate xpath becayse you can start antywhere  in html code
+some syntax of using relative xpatgh
+some syntax of using relative xpath
+1-// tagname[attribute='value]--looks for tagname attrubute and value
+2-//tagname[contains(@attribute,'value'))--lacate webelement with the given value if contains
+3-//tagname[.='text']-- looks for exat text natcg for any attribute
+ex:
+<div class = "est">
+<a class "Def" href = "www.google,com"
+div
+tagneme div
+attribute calass
+attribute value est
+ex:
+<div class "est">
+<a class "def" href = "www.google.com">
+div
+tagname div
+attribute  class
+attribute value est
+//a[@class='def']

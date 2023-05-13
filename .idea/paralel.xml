@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Smoke paralel ">
+    <test name="Oaralel module 89" parallel="classes"thread-count="5">
+        <classes>
+            <class name="day9_Actions_POM.c2_ActionsExamples"></class>
+            <class name="day9_Actions_POM.c4_smartBearPOMExample"></class>
+            <class name="D6_WebTable_Allerts_Iframe.c4_Iframes"></class>
+            <class name="Day8_Properties_JSexec.c4_AllertPractice"></class>
+            <class name="D1SeleniumIntroduction.c1HelloSelenium"></class>
+        </classes>
+    </test>
+</suite>

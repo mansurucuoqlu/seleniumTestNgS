@@ -1,0 +1,38 @@
+1-Name:
+This locator will be looking into the whole HTML code and return the webelement with matching name attribute value
+--this one will find and return the first webelemt it finds.
+syntax : driver. findELement (By. name ("hame attribute value")).
+
+2.Linktext (equals the text)
+--this Locater allows us to locate links by their text
+--this Locater will only works if webelement has links
+How do i understand if the webelemt has links ? <a href-"https//www.amazon.com*> Text amazon </a>
+Lagnane
+--> а
+Attribute --> href
+Atribute Value https//www.amazon.com
+Link text
+-- Text amazon
+syntax : driver. findElement(By.linktext("Text amazon")) ;
+
+d
+ago)
+3.Partiallinktext (contain the text)
+--this locater allows us to locate links by their text
+--but it doesnt need exact match for text
+syntax : driver. findELement(By-partialLinktext ("amazon")) ;
+c2_GoogleNameLocater
+c2 GoogleNameLocater.java
+# notes2
+У 20
+E Maven
+-To Search something in html for mac click command+F for windows ctrl+F
+4.id
+--id will locate by matching id attribute's value.
+-id is unique for the specific webelement
+--if if you have id and its not dynamic you should always use id .
+dynamic (when you refresh if you see id value is changing that means id is dynamic) syntax : driver. findElement(By.id("id attribute value"));
+5. cLassName :
+-className is not unique , thats why it might have multiple values of the same attribute
+--and it will return you the first one it finds
+syntax : driver. findElement (By.className ("class attribute value"));
